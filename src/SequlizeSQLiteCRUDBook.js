@@ -16,7 +16,9 @@ const sequelize = new Sequelize('database', 'username', 'password', {
     dialect: 'sqlite',
     storage: './Database/Book.sqlite'
 });
-
+app.get("/", (req, res) => {
+  res.send("hello wuttichai world!");
+});
 // define a book model
 const Book = sequelize.define('book', {
     id: {
